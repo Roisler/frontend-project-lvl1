@@ -1,4 +1,4 @@
-name: github action js
+name: github actions js
 on: push
 jobs:
   my-job:
