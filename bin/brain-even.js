@@ -7,17 +7,17 @@ console.log(`Hello, ${writeName}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 for (let i = 0; i < 3; i += 1) {
-    let randomNum = Math.floor(Math.random() * 100) + 1;
-    let newAnswer = readlineSync.question(`Question: ${randomNum}\nYour Answer: `);
-    let correctAnswer = (randomNum % 2 === 0) ? 'yes' : 'no';
-    if (newAnswer !== correctAnswer) {
-        console.log(`'${newAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-        console.log(`Let's try again, ${writeName}!`);
-        break;
-    } else {
-        console.log('Correct!');
-    };
-    if (i === 2 && newAnswer === correctAnswer) {
-        console.log(`Congratulations, ${writeName}!`);
-    };
-};
+  const randomNum = Math.floor(Math.random() * 100) + 1;
+  const newAnswer = readlineSync.question(`Question: ${randomNum}\nYour Answer: `);
+  const correctAnswer = randomNum % 2 === 0 ? 'yes' : 'no';
+  if (newAnswer !== correctAnswer) {
+    console.log(`'${newAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+    console.log(`Let's try again, ${writeName}!`);
+    break;
+  } else {
+    console.log('Correct!');
+  }
+  if (i === 2 && newAnswer === correctAnswer) {
+    console.log(`Congratulations, ${writeName}!`);
+  }
+}
