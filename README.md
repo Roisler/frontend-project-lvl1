@@ -8,8 +8,8 @@
 
 [![demo](https://asciinema.org/a/WYBx0s0jdYRRjBII5yMzdb02z.svg)](https://asciinema.org/a/WYBx0s0jdYRRjBII5yMzdb02z)
 
-[![acsiicast](https://asciinema.org/a/5NCnXBF5qtSFdR4Exm1MQMeNh.png)(https://asciinema.org/a/5NCnXBF5qtSFdR4Exm1MQMeNh)
+[![demo](https://asciinema.org/a/5NCnXBF5qtSFdR4Exm1MQMeNh.svg)](https://asciinema.org/a/5NCnXBF5qtSFdR4Exm1MQMeNh)
 
-[![acsiicast](https://asciinema.org/a/UCtgqbSuioBmmVMwEzy8KhNzZ.png)(https://asciinema.org/a/UCtgqbSuioBmmVMwEzy8KhNzZ)
+[![demo](https://asciinema.org/a/UCtgqbSuioBmmVMwEzy8KhNzZ.svg)](https://asciinema.org/a/UCtgqbSuioBmmVMwEzy8KhNzZ)
 
-[![acsiicast](https://asciinema.org/a/CqrrBCQAK8fSb8LAycay1mXyg.png)(https://asciinema.org/a/CqrrBCQAK8fSb8LAycay1mXyg)
+[![demo](https://asciinema.org/a/CqrrBCQAK8fSb8LAycay1mXyg.svg)](https://asciinema.org/a/CqrrBCQAK8fSb8LAycay1mXyg)
