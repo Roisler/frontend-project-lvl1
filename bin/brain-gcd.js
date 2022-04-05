@@ -6,8 +6,8 @@ const nameUser = question.nameUser();
 
 console.log('Find the greatest common divisor of given numbers');
 for (let i = 0; i < 3; i += 1) {
-  const randomNum1 = question.randomNum();
-  const randomNum2 = question.randomNum();
+  const randomNum1 = question.randomNum(20);
+  const randomNum2 = question.randomNum(20);
 
   const stepQuestion = `${randomNum1} ${randomNum2}`;
   const newAnswer = question.newAnswer(stepQuestion);

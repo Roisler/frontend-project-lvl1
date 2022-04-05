@@ -8,8 +8,8 @@ const nameUser = question.nameUser();
 console.log('What is the result of the expression?');
 
 for (let i = 0; i < 3; i += 1) {
-  const randomNum1 = question.randomNum();
-  const randomNum2 = question.randomNum();
+  const randomNum1 = question.randomNum(20);
+  const randomNum2 = question.randomNum(20);
   const randomOperation = question.randomElement(['*', '+', '-']);
   const stepQuestion = `${randomNum1} ${randomOperation} ${randomNum2}`;
   const newAnswer = question.newAnswer(stepQuestion);

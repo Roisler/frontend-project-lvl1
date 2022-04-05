@@ -11,7 +11,7 @@ export const newAnswer = (mainQuestion) => {
   const answer = readlineSync.question(`Question: ${mainQuestion}\nYour answer: `);
   return (Number(answer));
 };
-export const randomNum = () => Math.floor(Math.random() * 20) + 1;
+export const randomNum = (max) => Math.floor(Math.random() * max) + 1;
 export const randomElement = (arr) => {
   const i = Math.floor(Math.random() * arr.length);
   return arr[i];
