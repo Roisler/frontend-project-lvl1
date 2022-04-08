@@ -10,13 +10,13 @@ Brain Games это 5 различных игр для тренировки мо�
 
 #### Установка
 1. Склонируйте репозиторий
-        $ git clone https://github.com/Roisler/frontend-project-lvl1.git >
+```$ git clone https://github.com/Roisler/frontend-project-lvl1.git```
 2. Перейдите в директорию проекта
-        $ cd frontend-project-lvl1
+```$ cd frontend-project-lvl1```
 3. Установите зависимости
-        $ make install
+```$ make install```
 4. Установите пакеты
-        $ npm link
+```$ npm link```
 5. Запустите команду для запуска игры
 
 #### Список игр
