@@ -33,7 +33,7 @@ Brain Games это 5 различных игр для тренировки мо�
 
 Для запуска используйте команду: **brain-even**
 
-[![demo](https://asciinema.org/a/WYBx0s0jdYRRjBII5yMzdb02z.svg)](https://asciinema.org/a/WYBx0s0jdYRRjBII5yMzdb02z)
+[![demo](https://asciinema.org/a/0DIG6iS7XU8pOrdGNbxlMWuux.svg)](https://asciinema.org/a/0DIG6iS7XU8pOrdGNbxlMWuuxi)
 ##### 2. Калькулятор
 Пользователю необходимо вычислить предложенные выражения.
 
