@@ -1,26 +1,28 @@
-import * as question from '../index.js';
+import launch from '../index.js';
+import { getRandomIntInclusive } from '../utils.js';
 
 const task = 'What is the result of the expression?';
 
-const correctOfOperation = (r1, r2, operation) => {
+const getCorrectResult = (firstNum, secondNum, operation) => {
   if (operation === '+') {
-    return r1 + r2;
+    return firstNum + secondNum;
   }
   if (operation === '-') {
-    return r1 - r2;
+    return firstNum - secondNum;
   }
-  return r1 * r2;
+  return firstNum * secondNum;
 };
 
-const getAnswerAndQUestion = () => {
-  const randomNum1 = question.randomNum(20);
-  const randomNum2 = question.randomNum(20);
-  const randomOperation = question.randomElement(['*', '+', '-']);
-  const stepQuestion = `${randomNum1} ${randomOperation} ${randomNum2}`;
-  const correctAnswer = String(correctOfOperation(randomNum1, randomNum2, randomOperation));
+const getAnswerAndQuestion = () => {
+  const firstNumber = getRandomIntInclusive(0, 20);
+  const secondNumber = getRandomIntInclusive(0, 20);
+  const operation = ['*', '+', '-'];
+  const randomOperation = operation[getRandomIntInclusive(0, operation.length - 1)];
+  const stepQuestion = `${firstNumber} ${randomOperation} ${secondNumber}`;
+  const correctAnswer = String(getCorrectResult(firstNumber, secondNumber, randomOperation));
   return [stepQuestion, correctAnswer];
 };
 
-const runBrainCalc = () => question.runGame(task, getAnswerAndQUestion);
+const runBrainCalc = () => launch(task, getAnswerAndQuestion);
 
 export default runBrainCalc;
