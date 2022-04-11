@@ -1,30 +1,35 @@
-import * as question from '../index.js';
+import launch from '../index.js';
+import { getRandomIntInclusive } from '../utils.js';
 
 const task = 'What number is missing in the progression?';
 
-const getAnswerAndQUestion = () => {
-  const randomNum1 = question.randomNum(10);
-  const randomNum2 = question.randomNum(10);
+const createNewProgression = () => {
+  const firstNumber = getRandomIntInclusive(0, 10);
+  const stepProgression = getRandomIntInclusive(1, 10);
 
   const minLengthArr = 5;
   const maxLengthArr = 11;
-  const randomLengthArr = Math.floor(Math.random() * (maxLengthArr - minLengthArr) + minLengthArr);
+  const randomLengthArr = getRandomIntInclusive(minLengthArr, maxLengthArr);
 
   const arr = [];
-  arr[0] = randomNum1;
+  arr[0] = firstNumber;
 
-  for (let index = 1; index < randomLengthArr; index += 1) {
-    arr.push(arr[index - 1] + randomNum2);
+  for (let i = 1; i < randomLengthArr; i += 1) {
+    arr.push(arr[i - 1] + stepProgression);
   }
+  return arr;
+};
 
-  const randomIndexElement = question.randomNum(randomLengthArr - 1);
-  const correctAnswer = String(arr[randomIndexElement - 1]);
-  arr[randomIndexElement - 1] = '..';
+const getAnswerAndQuestion = () => {
+  const newArray = createNewProgression();
+  const hideIndex = getRandomIntInclusive(0, newArray.length - 1);
+  const correctAnswer = String(newArray[hideIndex]);
+  newArray[hideIndex] = '..';
 
-  const stepQuestion = `${arr.join(' ')}`;
+  const stepQuestion = newArray.join(' ');
   return [stepQuestion, correctAnswer];
 };
 
-const runBrainProgression = () => question.runGame(task, getAnswerAndQUestion);
+const runBrainProgression = () => launch(task, getAnswerAndQuestion);
 
 export default runBrainProgression;
