@@ -1,29 +1,24 @@
-import * as question from '../index.js';
+import launch from '../index.js';
+import { getRandomIntInclusive } from '../utils.js';
 
 const task = 'Find the greatest common divisor of given numbers';
 
-const getGreatestCommonDivisor = (num1, num2) => {
-  let i;
-  for (i = Math.min(num1, num2); i >= 1; i -= 1) {
-    if (i === 1) {
-      return i;
-    }
-    if ((num1 % i === 0) && (num2 % i === 0)) {
-      return i;
-    }
+const getGreatestCommonDivisor = (a, b) => {
+  if (b !== 0) {
+    return getGreatestCommonDivisor(b, a % b);
   }
-  return i;
+  return a;
 };
 
-const getAnswerAndQUestion = () => {
-  const randomNum1 = question.randomNum(20);
-  const randomNum2 = question.randomNum(20);
+const getAnswerAndQuestion = () => {
+  const firstNumber = getRandomIntInclusive(1, 20);
+  const secondNumber = getRandomIntInclusive(1, 20);
 
-  const stepQuestion = `${randomNum1} ${randomNum2}`;
-  const correctAnswer = String(getGreatestCommonDivisor(randomNum1, randomNum2));
+  const stepQuestion = `${firstNumber} ${secondNumber}`;
+  const correctAnswer = String(getGreatestCommonDivisor(firstNumber, secondNumber));
   return [stepQuestion, correctAnswer];
 };
 
-const runBrainGcd = () => question.runGame(task, getAnswerAndQUestion);
+const runBrainGcd = () => launch(task, getAnswerAndQuestion);
 
 export default runBrainGcd;
