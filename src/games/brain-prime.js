@@ -1,10 +1,15 @@
-import * as question from '../index.js';
+import launch from '../index.js';
+import { getRandomIntInclusive } from '../utils.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
-  for (let index = 2; index <= Math.sqrt(number); index += 1) {
-    if (number % index === 0) {
+  const maxNumberCheck = Math.sqrt(number);
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i <= maxNumberCheck; i += 1) {
+    if (number % i === 0) {
       return false;
     }
   }
@@ -12,11 +17,11 @@ const isPrime = (number) => {
 };
 
 const getAnswerAndQUestion = () => {
-  const stepQuestion = question.randomNum(100);
+  const stepQuestion = getRandomIntInclusive(0, 100);
   const correctAnswer = isPrime(stepQuestion) ? 'yes' : 'no';
   return [stepQuestion, correctAnswer];
 };
 
-const runBrainPrime = () => question.runGame(task, getAnswerAndQUestion);
+const runBrainPrime = () => launch(task, getAnswerAndQUestion);
 
 export default runBrainPrime;
