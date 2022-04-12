@@ -3,14 +3,11 @@ import { getRandomIntInclusive } from '../utils.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (num) => {
-  const even = (num % 2 === 0) ? 'yes' : 'no';
-  return even;
-};
+const isEven = (num) => num % 2 === 0;
 
 const getAnswerAndQuestion = () => {
   const stepQuestion = getRandomIntInclusive(0, 1000);
-  const correctAnswer = isEven(stepQuestion);
+  const correctAnswer = isEven(stepQuestion) ? 'yes' : 'no';
   return [stepQuestion, correctAnswer];
 };
 
