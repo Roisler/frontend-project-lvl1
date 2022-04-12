@@ -16,10 +16,10 @@ const getCorrectResult = (firstNum, secondNum, operation) => {
 const getAnswerAndQuestion = () => {
   const firstNumber = getRandomIntInclusive(0, 20);
   const secondNumber = getRandomIntInclusive(0, 20);
-  const operation = ['*', '+', '-'];
-  const randomOperation = operation[getRandomIntInclusive(0, operation.length - 1)];
-  const stepQuestion = `${firstNumber} ${randomOperation} ${secondNumber}`;
-  const correctAnswer = String(getCorrectResult(firstNumber, secondNumber, randomOperation));
+  const operations = ['*', '+', '-'];
+  const operation = operations[getRandomIntInclusive(0, operations.length - 1)];
+  const stepQuestion = `${firstNumber} ${operation} ${secondNumber}`;
+  const correctAnswer = String(getCorrectResult(firstNumber, secondNumber, operation));
   return [stepQuestion, correctAnswer];
 };
 
